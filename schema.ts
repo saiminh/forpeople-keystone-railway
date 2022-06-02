@@ -35,4 +35,18 @@ export const lists = {
       tasks: relationship({ ref: 'Task.assignedTo', many: true }),
     },
   }),
+  Page: list({
+    fields: {
+      name: text({ isRequired: true }),
+      body: document({
+        formatting: true,
+        dividers: true,
+        links: true,
+        layouts: [
+          [1, 1],
+          [1, 1, 1],
+        ],
+      }),
+    }
+  }),
 };
