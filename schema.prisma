@@ -30,3 +30,9 @@ model Person {
   password String?
   tasks    Task[]  @relation("Task_assignedTo")
 }
+
+model Page {
+  id   String @id @default(cuid())
+  name String @default("")
+  body Json   @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+}
