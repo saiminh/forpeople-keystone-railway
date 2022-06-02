@@ -3,6 +3,7 @@
 
 import { list } from '@keystone-6/core';
 import { checkbox, password, relationship, text, timestamp, select } from '@keystone-6/core/fields';
+import { document } from '@keystone-6/fields-document';
 
 export const lists = {
   Task: list({
